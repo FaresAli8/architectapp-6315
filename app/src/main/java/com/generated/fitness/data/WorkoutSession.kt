@@ -1,0 +1,14 @@
+package com.generated.fitness.data
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "workout_sessions")
+data class WorkoutSession(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+    val activityType: String, // Running, Walking, Cycling
+    val durationMinutes: Int,
+    val caloriesBurned: Int,
+    val timestamp: Long = System.currentTimeMillis()
+)
